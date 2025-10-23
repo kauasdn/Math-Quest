@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://o7c0e4h5puhs"]
+
+[ext_resource type="Script" uid="uid://d4be54penh7k4" path="res://scripts/QuizScene.gd" id="1"]
+
+[node name="QuizScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1")
+
+[node name="QuestionLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 267.0
+offset_bottom = 290.0
+grow_horizontal = 2
+text = "Pergunta aparecerá aqui"
+horizontal_alignment = 1
+
+[node name="Answers" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Answer0" type="Button" parent="Answers"]
+layout_mode = 2
+text = "A"
+
+[node name="Answer1" type="Button" parent="Answers"]
+layout_mode = 2
+text = "B"
+
+[node name="Answer2" type="Button" parent="Answers"]
+layout_mode = 2
+text = "C"
+
+[node name="Answer3" type="Button" parent="Answers"]
+layout_mode = 2
+text = "D"

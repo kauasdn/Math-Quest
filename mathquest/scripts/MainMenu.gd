@@ -1,0 +1,12 @@
+extends Control
+
+func _ready():
+	$VBoxContainer/Title.text = "Math Quest"
+	$VBoxContainer/StartButton.pressed.connect(_on_start_pressed)
+	$VBoxContainer/QuitButton.pressed.connect(_on_quit_pressed)
+
+func _on_start_pressed():
+	get_tree().change_scene_to_file("res://scenes/KingdomSelect.tscn")
+
+func _on_quit_pressed():
+	get_tree().quit()
