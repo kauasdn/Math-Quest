@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://c34qsql8rcmk3"]
+
+[ext_resource type="Script" uid="uid://b01nmajjfcc42" path="res://scenes/ui/SkinMenu.gd" id="1_3cv58"]
+[ext_resource type="PackedScene" uid="uid://dyf12prh2n5tj" path="res://scenes/ui/SkinButton.tscn" id="2_om3mn"]
+[ext_resource type="PackedScene" uid="uid://dcuo41eqpeu4n" path="res://scenes/ui/UIAudio.tscn" id="3_a35b1"]
+
+[node name="SkinMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_3cv58")
+skin_button_scene = ExtResource("2_om3mn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -23.0
+offset_right = 231.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "Para ganhar skins diferentes, obtenha pontuações perfeitas"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -279.5
+offset_right = 255.0
+offset_bottom = 279.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.5
+offset_top = -258.0
+offset_right = 193.5
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Escolha sua Skin"
+horizontal_alignment = 1
+
+[node name="SkinContainer" type="VBoxContainer" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 60
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Fechar menu"
+
+[node name="UIAudio" parent="." instance=ExtResource("3_a35b1")]

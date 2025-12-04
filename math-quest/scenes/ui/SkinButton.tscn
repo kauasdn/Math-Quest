@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyf12prh2n5tj"]
+
+[ext_resource type="Script" uid="uid://dhjuw4jk7v157" path="res://scenes/ui/SkinButton.gd" id="1_2f6lk"]
+
+[node name="SkinButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_2f6lk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2

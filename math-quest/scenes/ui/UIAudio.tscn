@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcuo41eqpeu4n"]
+
+[ext_resource type="Script" uid="uid://ceqqonygfbrb5" path="res://scenes/ui/UIAudio.gd" id="1_0y3sc"]
+[ext_resource type="AudioStream" uid="uid://dlwaj2r1tfhpj" path="res://sounds/MenuHover.wav" id="2_0a78x"]
+[ext_resource type="AudioStream" uid="uid://daj4w0tl6tlui" path="res://sounds/MenuClick.wav" id="3_pnust"]
+
+[node name="UIAudio" type="Node"]
+script = ExtResource("1_0y3sc")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0a78x")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pnust")

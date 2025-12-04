@@ -1,0 +1,15 @@
+Button
+RichTextLabel
+Label
+Panel
+ColorRect
+CanvasLayer
+AudioStreamPlayer
+Node
+Node2D
+TileMapLayer
+VBoxContainer
+AudioStreamPlayer2D
+TextureRect
+Control
+CollisionShape2D

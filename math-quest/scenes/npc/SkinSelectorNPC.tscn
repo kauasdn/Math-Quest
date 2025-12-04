@@ -1,0 +1,125 @@
+[gd_scene load_steps=16 format=3 uid="uid://cks75s1c61k86"]
+
+[ext_resource type="Script" uid="uid://ccadwing54bhd" path="res://scenes/npc/SkinSelectorNPC.gd" id="1_g1c2s"]
+[ext_resource type="Texture2D" uid="uid://bwlgo76pmvdch" path="res://scenes/npc/assets/skin_selector_npc.png" id="2_tc40h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x536"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(0, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mswky"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(96, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agw1d"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(192, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdmck"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(288, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aow8w"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(384, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsty6"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(480, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nty3h"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(576, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nlbj"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(672, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipbxm"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(768, 30, 96, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_farc1"]
+atlas = ExtResource("2_tc40h")
+region = Rect2(864, 30, 96, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxd67"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4x536")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mswky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agw1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdmck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aow8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsty6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nty3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nlbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipbxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_farc1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7w8ff"]
+radius = 8.0
+height = 34.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1c2s"]
+radius = 29.0
+height = 58.0
+
+[node name="SkinSelectorNPC" type="StaticBody2D"]
+script = ExtResource("1_g1c2s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.861023e-06, -9.536743e-07)
+scale = Vector2(1.3030304, 1.3030304)
+sprite_frames = SubResource("SpriteFrames_dxd67")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7w8ff")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 0
+shape = SubResource("CapsuleShape2D_g1c2s")
+
+[node name="InteractionHint" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -40.0
+offset_right = 59.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+text = "Aperte \"E\" para interagir"

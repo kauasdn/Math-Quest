@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bicjkwu8g5x24"]
+
+[ext_resource type="AudioStream" uid="uid://cw6ckkoddi8ml" path="res://sounds/musica_fundo.wav" id="1_k17rw"]
+
+[node name="MusicManager" type="Node"]
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_k17rw")
+volume_db = -15.0
+autoplay = true

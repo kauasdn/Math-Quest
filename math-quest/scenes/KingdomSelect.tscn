@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds4a1flyy4c13"]
+
+[ext_resource type="Script" uid="uid://j25iebomtv10" path="res://scripts/KingdomSelect.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://iu2yiboprq3d" path="res://mathquest/Background_16_9_blend.png" id="2_2mpf3"]
+[ext_resource type="Texture2D" uid="uid://57bhv2wbrkg0" path="res://mathquest/Quest Screen.png" id="3_s61ye"]
+[ext_resource type="PackedScene" uid="uid://dcuo41eqpeu4n" path="res://scenes/ui/UIAudio.tscn" id="4_s61ye"]
+
+[node name="KingdomSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -330.5
+offset_right = 577.0
+offset_bottom = 330.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2mpf3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -325.0
+offset_right = 576.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_s61ye")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 111.0
+offset_right = 650.0
+offset_bottom = 134.0
+text = "Selecione um Reino"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 216.0
+offset_right = 720.0
+offset_bottom = 392.0
+
+[node name="KingdomList" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Voltar"
+
+[node name="UIAudio" parent="." instance=ExtResource("4_s61ye")]

@@ -1,0 +1,60 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://5h821068rqj4"]
+
+[ext_resource type="Texture2D" uid="uid://dwdtmvlim57ow" path="res://scenes/npc/assets/warrior_npc.png" id="1_hxxdl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxxdl"]
+atlas = ExtResource("1_hxxdl")
+region = Rect2(0, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h1hp"]
+atlas = ExtResource("1_hxxdl")
+region = Rect2(96, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbchu"]
+atlas = ExtResource("1_hxxdl")
+region = Rect2(192, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75jl4"]
+atlas = ExtResource("1_hxxdl")
+region = Rect2(288, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tobs7"]
+atlas = ExtResource("1_hxxdl")
+region = Rect2(384, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcu3w"]
+atlas = ExtResource("1_hxxdl")
+region = Rect2(480, 0, 96, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73eof"]
+atlas = ExtResource("1_hxxdl")
+region = Rect2(576, 0, 96, 84)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxxdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h1hp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbchu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75jl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tobs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcu3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73eof")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
